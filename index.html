@@ -168,25 +168,30 @@
   .g-text { font-size: 0.78rem; line-height: 1.55; color: rgba(249,246,238,0.55); }
 
   /* ── ÜBER / INHABER ── */
-  #ueber { padding: 4rem 1.4rem; }
-  .ueber-inner { display: flex; flex-direction: column; gap: 2.5rem; }
-  .ueber-text p { font-size: 0.9rem; line-height: 1.85; color: rgba(249,246,238,0.52); margin-bottom: 1rem; }
+  #ueber { padding: 2.5rem 1.4rem; }
+  .ueber-inner { display: flex; flex-direction: row; gap: 1.2rem; align-items: flex-start; }
+  .ueber-visual { flex: 0 0 120px; position: relative; }
+  .ueber-text { flex: 1; min-width: 0; }
+  .ueber-text .sec-title { font-size: clamp(1.6rem, 7vw, 5rem); margin-bottom: 0.6rem; }
+  .ueber-text .rule { margin-bottom: 1.2rem; }
+  .ueber-text p { font-size: 0.82rem; line-height: 1.7; color: rgba(249,246,238,0.52); margin-bottom: 0.7rem; }
+  .ueber-text .btn-y, .ueber-text .btn-o { font-size: 0.6rem; padding: 0.65rem 1rem; letter-spacing: 0.15em; }
   .inhaber-img-wrap {
-    width: 100%; max-width: 100%;
-    aspect-ratio: 4/5; overflow: hidden; position: relative;
+    width: 120px; height: 160px;
+    overflow: hidden; position: relative; flex-shrink: 0;
   }
   .inhaber-img-wrap::after {
     content: ''; position: absolute; inset: 0;
-    background: linear-gradient(to bottom, transparent 55%, rgba(7,7,7,0.6) 100%);
+    background: linear-gradient(to bottom, transparent 55%, rgba(7,7,7,0.5) 100%);
   }
-  .inhaber-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+  .inhaber-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
   .inhaber-badge {
-    position: absolute; bottom: 0.8rem; right: 0.8rem;
+    position: absolute; bottom: 0.4rem; right: 0.4rem;
     background: rgba(7,7,7,0.9);
     border: 1px solid rgba(245,214,0,0.25);
-    padding: 0.6rem 0.8rem; z-index: 2;
+    padding: 0.3rem 0.4rem; z-index: 2;
   }
-  .inhaber-badge img { width: 70px; display: block; }
+  .inhaber-badge img { width: 44px; display: block; }
 
   /* ── KONTAKT ── */
   #kontakt { padding: 4rem 1.4rem; background: var(--black); }
@@ -271,9 +276,15 @@
     .g-card:hover .g-caption { transform: translateY(0); }
     .g-card:hover .g-img-wrap img { transform: scale(1.05); }
 
-    #ueber .ueber-inner { flex-direction: row; gap: 6rem; align-items: center; }
+    #ueber { padding: 7rem 3.5rem; }
+    #ueber .ueber-inner { flex-direction: row; gap: 5rem; align-items: center; }
     #ueber .ueber-text { flex: 1; }
-    #ueber .ueber-visual { flex: 1; }
+    #ueber .ueber-visual { flex: 0 0 380px; }
+    #ueber .inhaber-img-wrap { width: 100%; height: auto; aspect-ratio: 3/4; }
+    #ueber .ueber-text .sec-title { font-size: clamp(2.8rem, 5vw, 5rem); }
+    #ueber .ueber-text p { font-size: 0.92rem; }
+    #ueber .inhaber-badge img { width: 80px; }
+    #ueber .ueber-text .btn-y, #ueber .ueber-text .btn-o { font-size: 0.68rem; padding: 0.85rem 2rem; }
 
     .kontakt-inner { flex-direction: row; gap: 6rem; align-items: start; }
     footer { flex-direction: row; justify-content: space-between; text-align: left; padding: 2rem 3.5rem; }
@@ -340,7 +351,7 @@
     <p>Kein Franchise. Kein Konzern. Hinter Star-Fit steht ein Mensch — R. Brunnbauer, Inhaber und selbst leidenschaftlicher Athlet.</p>
     <p>Persönliche Betreuung ist hier kein Slogan, sondern Alltag. Wer ins Star-Fit kommt, wird gesehen — nicht als Mitgliedsnummer, sondern als Mensch mit einem Ziel.</p>
     <p>Grafenau – Großarmschlag. Seit Jahren die erste Adresse für alle, die Ergebnisse wollen.</p>
-    <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
+    <div style="margin-top:1.2rem;display:flex;gap:0.6rem;flex-wrap:wrap;">
       <a href="#kontakt" class="btn-y">Probetraining vereinbaren</a>
       <a href="tel:+4985529 73121" class="btn-o">08552 97 31 21</a>
     </div>
